@@ -1,82 +1,50 @@
-# Lightweight React Template for KAVIA
+# Todo App Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern, minimalistic React frontend for managing and tracking tasks (Todos).
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Add, edit, complete, and delete todo items
+- Task list view with dynamic status filters (All / Active / Completed)
+- Toggle completion with one click
+- Responsive, minimalistic UI design
+- Accessible keyboard navigation for all controls
+- Modern color palette: Primary #2563eb, Secondary #64748b, Accent #f59e42
 
-## Getting Started
+## Project Structure
 
-In the project directory, you can run:
+- `src/App.js` — Main app logic and state
+- `src/components/` — UI components (TodoList, TodoItem, TodoForm, Filters)
+- `src/api/todos.js` — Abstracts Todo API (in-memory stub now, swap with REST later)
+- `src/App.css` & `src/index.css` — Theme, palette, and minimal styles
 
-### `npm start`
+## Running Locally
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```sh
+npm install
+npm start
+```
 
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The UI will load on [http://localhost:3000](http://localhost:3000).
 
 ## Customization
 
-### Colors
+To connect to a backend:
+- Swap methods in `src/api/todos.js` with fetch/axios calls to your API.
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+## Design
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+- Modern, minimal, responsive layout:
+  - Header with accent bar and title
+  - Filtered controls and input on the left
+  - Task list on the right
+  - Media queries for mobile friendliness
 
-### Components
+Palette in CSS root variables (see `App.css`):
+- Primary: #2563eb
+- Secondary: #64748b
+- Accent: #f59e42
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+## License
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
